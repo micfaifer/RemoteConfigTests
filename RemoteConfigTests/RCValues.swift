@@ -2,11 +2,11 @@ import Firebase
 
 class RCValues {
     enum ValueKey: String {
-      case teste
+      case labelText
     }
     
     let appDefaults: [String:NSObject] = [
-      ValueKey.teste.rawValue : "Oia la vei" as NSObject
+      ValueKey.labelText.rawValue : "Olá" as NSObject
     ]
     
     private let remoteConfig: RemoteConfig
@@ -15,12 +15,16 @@ class RCValues {
     private init() {
         remoteConfig = RemoteConfig.remoteConfig()
         remoteConfig.setDefaults(appDefaults)
+        remoteConfig.configSettings.minimumFetchInterval = 7200
     }
     
     func fetchRemoteConfig(_ completionHandler: @escaping ((_ error: Error?) -> Void)) {
         remoteConfig.fetch { status, error in
-            guard error == nil else { return completionHandler(nil)}
-            completionHandler(error)
+            return completionHandler(error)
         }
+    }
+    
+    func getLabelText() -> String {
+        return remoteConfig[ValueKey.labelText.rawValue].stringValue!
     }
 }
