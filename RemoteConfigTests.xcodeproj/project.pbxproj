@@ -10,12 +10,13 @@
 		5F387B6F0290E584C684F21C /* Pods_RemoteConfigTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF440CDF934A251C2CB1AE8 /* Pods_RemoteConfigTests.framework */; };
 		E9D29E68251F6F0100B5216C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D29E67251F6F0100B5216C /* AppDelegate.swift */; };
 		E9D29E6A251F6F0100B5216C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D29E69251F6F0100B5216C /* SceneDelegate.swift */; };
-		E9D29E6C251F6F0100B5216C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D29E6B251F6F0100B5216C /* ViewController.swift */; };
+		E9D29E6C251F6F0100B5216C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D29E6B251F6F0100B5216C /* SecondViewController.swift */; };
 		E9D29E6F251F6F0100B5216C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D29E6D251F6F0100B5216C /* Main.storyboard */; };
 		E9D29E71251F6F0200B5216C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D29E70251F6F0200B5216C /* Assets.xcassets */; };
 		E9D29E74251F6F0200B5216C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D29E72251F6F0200B5216C /* LaunchScreen.storyboard */; };
 		E9D29E8A251F6F7E00B5216C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9D29E89251F6F7E00B5216C /* GoogleService-Info.plist */; };
-		E9D29EA7251F813D00B5216C /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9D29EA6251F813D00B5216C /* RemoteConfigDefaults.plist */; };
+		E9E8EEFE2529055A00D1EE79 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E8EEFD2529055A00D1EE79 /* FirstViewController.swift */; };
+		E9E8EF022529136100D1EE79 /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E8EF012529136100D1EE79 /* RCValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,13 +26,14 @@
 		E9D29E64251F6F0100B5216C /* RemoteConfigTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteConfigTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D29E67251F6F0100B5216C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D29E69251F6F0100B5216C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9D29E6B251F6F0100B5216C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9D29E6B251F6F0100B5216C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E9D29E6E251F6F0100B5216C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9D29E70251F6F0200B5216C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9D29E73251F6F0200B5216C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9D29E75251F6F0200B5216C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9D29E89251F6F7E00B5216C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E9D29EA6251F813D00B5216C /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		E9E8EEFD2529055A00D1EE79 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		E9E8EF012529136100D1EE79 /* RCValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +88,14 @@
 			children = (
 				E9D29E67251F6F0100B5216C /* AppDelegate.swift */,
 				E9D29E69251F6F0100B5216C /* SceneDelegate.swift */,
-				E9D29E6B251F6F0100B5216C /* ViewController.swift */,
+				E9D29E6B251F6F0100B5216C /* SecondViewController.swift */,
 				E9D29E6D251F6F0100B5216C /* Main.storyboard */,
+				E9E8EEFD2529055A00D1EE79 /* FirstViewController.swift */,
 				E9D29E70251F6F0200B5216C /* Assets.xcassets */,
 				E9D29E72251F6F0200B5216C /* LaunchScreen.storyboard */,
 				E9D29E89251F6F7E00B5216C /* GoogleService-Info.plist */,
 				E9D29E75251F6F0200B5216C /* Info.plist */,
-				E9D29EA6251F813D00B5216C /* RemoteConfigDefaults.plist */,
+				E9E8EF012529136100D1EE79 /* RCValues.swift */,
 			);
 			path = RemoteConfigTests;
 			sourceTree = "<group>";
@@ -157,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9D29E74251F6F0200B5216C /* LaunchScreen.storyboard in Resources */,
-				E9D29EA7251F813D00B5216C /* RemoteConfigDefaults.plist in Resources */,
 				E9D29E8A251F6F7E00B5216C /* GoogleService-Info.plist in Resources */,
 				E9D29E71251F6F0200B5216C /* Assets.xcassets in Resources */,
 				E9D29E6F251F6F0100B5216C /* Main.storyboard in Resources */,
@@ -213,9 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9D29E6C251F6F0100B5216C /* ViewController.swift in Sources */,
+				E9D29E6C251F6F0100B5216C /* SecondViewController.swift in Sources */,
+				E9E8EF022529136100D1EE79 /* RCValues.swift in Sources */,
 				E9D29E68251F6F0100B5216C /* AppDelegate.swift in Sources */,
 				E9D29E6A251F6F0100B5216C /* SceneDelegate.swift in Sources */,
+				E9E8EEFE2529055A00D1EE79 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
