@@ -6,6 +6,7 @@ target 'RemoteConfigTests' do
   use_frameworks!
   pod 'Firebase/Analytics'
   pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Messaging'
 
   # Pods for RemoteConfigTests
 

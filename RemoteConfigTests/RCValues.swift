@@ -16,6 +16,9 @@ class RCValues {
         remoteConfig = RemoteConfig.remoteConfig()
         remoteConfig.setDefaults(appDefaults)
         remoteConfig.configSettings.minimumFetchInterval = 7200
+        if remoteConfig.configSettings.isDeveloperModeEnabled || UserDefaults.standard.bool(forKey: "CONFIG_STALE") {
+            remoteConfig.configSettings.minimumFetchInterval = 7200
+        }
     }
     
     func fetchRemoteConfig(_ completionHandler: @escaping ((_ error: Error?) -> Void)) {
