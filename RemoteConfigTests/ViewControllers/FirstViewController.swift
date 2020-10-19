@@ -9,7 +9,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        RCValues.sharedInstance.fetchRemoteConfig { [weak self] (error) in
+        RemoteConfigManager.sharedInstance.fetchConfig { [weak self] (error) in
             self?.performSegue(withIdentifier: self?.segueIdentifier ?? "", sender: nil)
         }
     }

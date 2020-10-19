@@ -8,7 +8,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelWelcome.text = RCValues.sharedInstance.getLabelText()
+        labelWelcome.text = RemoteConfigManager.sharedInstance.getLabelText()
     }
 }
 
