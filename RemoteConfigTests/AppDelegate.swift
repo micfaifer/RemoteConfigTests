@@ -11,22 +11,13 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         FirebaseApp.configure()
+        Messaging.messaging().delegate = self
         
-        if #available(iOS 10.0, *) {
-          // For iOS 10 display notification (sent via APNS)
-          UNUserNotificationCenter.current().delegate = self
-
-          let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-          UNUserNotificationCenter.current().requestAuthorization(
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(
             options: authOptions,
             completionHandler: {_, _ in })
-        } else {
-          let settings: UIUserNotificationSettings =
-          UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-          application.registerUserNotificationSettings(settings)
-        }
 
         application.registerForRemoteNotifications()
         return true
@@ -39,17 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        if (userInfo.index(forKey: "CONFIG_STATE") != nil) {
-            print("Config set to stale")
+        if userInfo["CONFIG_STATE"] != nil {
             UserDefaults.standard.set(true, forKey:"CONFIG_STALE")
+            NotificationCenter.default.post(name: .init("stale"), object: nil, userInfo: userInfo)
         }
         
         completionHandler(UIBackgroundFetchResult.newData)
@@ -62,8 +47,4 @@ extension AppDelegate : MessagingDelegate {
             print("Subscribed to PUSH_RC topic")
         }
     }
-}
-
-extension AppDelegate: UNUserNotificationCenterDelegate {
-
 }
