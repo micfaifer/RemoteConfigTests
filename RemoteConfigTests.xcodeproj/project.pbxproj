@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F387B6F0290E584C684F21C /* Pods_RemoteConfigTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF440CDF934A251C2CB1AE8 /* Pods_RemoteConfigTests.framework */; };
-		E9098255252A0839003ACF2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9098254252A0839003ACF2C /* GoogleService-Info.plist */; };
+		E9007602253CC8D100548262 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9007601253CC8D100548262 /* GoogleService-Info.plist */; };
 		E9D29E68251F6F0100B5216C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D29E67251F6F0100B5216C /* AppDelegate.swift */; };
 		E9D29E6A251F6F0100B5216C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D29E69251F6F0100B5216C /* SceneDelegate.swift */; };
 		E9D29E6C251F6F0100B5216C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D29E6B251F6F0100B5216C /* SecondViewController.swift */; };
@@ -16,14 +16,15 @@
 		E9D29E71251F6F0200B5216C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D29E70251F6F0200B5216C /* Assets.xcassets */; };
 		E9D29E74251F6F0200B5216C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D29E72251F6F0200B5216C /* LaunchScreen.storyboard */; };
 		E9E8EEFE2529055A00D1EE79 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E8EEFD2529055A00D1EE79 /* FirstViewController.swift */; };
-		E9E8EF022529136100D1EE79 /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E8EF012529136100D1EE79 /* RCValues.swift */; };
+		E9E8EF022529136100D1EE79 /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E8EF012529136100D1EE79 /* RemoteConfigManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BF440CDF934A251C2CB1AE8 /* Pods_RemoteConfigTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteConfigTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6301784902EE0A8E4EA8CDBC /* Pods-RemoteConfigTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteConfigTests.debug.xcconfig"; path = "Target Support Files/Pods-RemoteConfigTests/Pods-RemoteConfigTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3A08FD0C5F93159EF0A6BFC /* Pods-RemoteConfigTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteConfigTests.release.xcconfig"; path = "Target Support Files/Pods-RemoteConfigTests/Pods-RemoteConfigTests.release.xcconfig"; sourceTree = "<group>"; };
-		E9098254252A0839003ACF2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9007601253CC8D100548262 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E982B61F253C981500DFD2D2 /* RemoteConfigTests.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemoteConfigTests.entitlements; sourceTree = "<group>"; };
 		E9D29E64251F6F0100B5216C /* RemoteConfigTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteConfigTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D29E67251F6F0100B5216C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D29E69251F6F0100B5216C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +34,7 @@
 		E9D29E73251F6F0200B5216C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9D29E75251F6F0200B5216C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9E8EEFD2529055A00D1EE79 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		E9E8EF012529136100D1EE79 /* RCValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
+		E9E8EF012529136100D1EE79 /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,15 +87,16 @@
 		E9D29E66251F6F0100B5216C /* RemoteConfigTests */ = {
 			isa = PBXGroup;
 			children = (
+				E982B61F253C981500DFD2D2 /* RemoteConfigTests.entitlements */,
 				E9E8EF12252926E900D1EE79 /* ViewControllers */,
 				E9D29E67251F6F0100B5216C /* AppDelegate.swift */,
 				E9D29E69251F6F0100B5216C /* SceneDelegate.swift */,
 				E9D29E6D251F6F0100B5216C /* Main.storyboard */,
 				E9D29E72251F6F0200B5216C /* LaunchScreen.storyboard */,
 				E9D29E70251F6F0200B5216C /* Assets.xcassets */,
-				E9098254252A0839003ACF2C /* GoogleService-Info.plist */,
 				E9D29E75251F6F0200B5216C /* Info.plist */,
-				E9E8EF012529136100D1EE79 /* RCValues.swift */,
+				E9E8EF012529136100D1EE79 /* RemoteConfigManager.swift */,
+				E9007601253CC8D100548262 /* GoogleService-Info.plist */,
 			);
 			path = RemoteConfigTests;
 			sourceTree = "<group>";
@@ -168,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9D29E74251F6F0200B5216C /* LaunchScreen.storyboard in Resources */,
-				E9098255252A0839003ACF2C /* GoogleService-Info.plist in Resources */,
+				E9007602253CC8D100548262 /* GoogleService-Info.plist in Resources */,
 				E9D29E71251F6F0200B5216C /* Assets.xcassets in Resources */,
 				E9D29E6F251F6F0100B5216C /* Main.storyboard in Resources */,
 			);
@@ -224,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9D29E6C251F6F0100B5216C /* SecondViewController.swift in Sources */,
-				E9E8EF022529136100D1EE79 /* RCValues.swift in Sources */,
+				E9E8EF022529136100D1EE79 /* RemoteConfigManager.swift in Sources */,
 				E9D29E68251F6F0100B5216C /* AppDelegate.swift in Sources */,
 				E9D29E6A251F6F0100B5216C /* SceneDelegate.swift in Sources */,
 				E9E8EEFE2529055A00D1EE79 /* FirstViewController.swift in Sources */,
@@ -375,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RemoteConfigTests/RemoteConfigTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37NG63MNZN;
 				INFOPLIST_FILE = RemoteConfigTests/Info.plist;
@@ -382,7 +385,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adatech.Remote-Config-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adatech.RemoteConfigTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RemoteConfigTests/RemoteConfigTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37NG63MNZN;
 				INFOPLIST_FILE = RemoteConfigTests/Info.plist;
@@ -402,7 +406,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adatech.Remote-Config-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adatech.RemoteConfigTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
